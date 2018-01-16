@@ -9,12 +9,12 @@ $ mkdir /home/<username>/notebooks
 ## Configuration 
 If you are planning to use jupyter against an HDInsight cluster, please Update the username, password and cluster url in the `config.json` file. 
 
-1. Encode password with base64
-    ```bash
-    $ echo -n 'secret-hdinsight-password' | base64
-    ```
-2. Copy the encoded base64 password and update the `base64_password` field in `sparkmagic/config.json` for the required kernels.
-3. Update the `url` field in `sparkmagic/config.json` with the url of HDInsight cluster.
+- Encode password with base64
+```bash
+$ echo -n 'secret-hdinsight-password' | base64
+```
+- Copy the encoded base64 password and update the `base64_password` field in `sparkmagic/config.json` for the required kernels.
+- Update the `url` field in `sparkmagic/config.json` with the url of HDInsight cluster.
 
 ## Usage
 Run the docker container 
