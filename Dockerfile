@@ -28,4 +28,7 @@ RUN apk --no-cache add --virtual build-deps \
     jupyter serverextension enable --py sparkmagic && \
     apk del build-deps 
 RUN rm -r /root/.cache
-CMD ["jupyter", "notebook", "--ip=0.0.0.0", "--port=9999", "--no-browser", "--allow-root"]
+COPY start_notebook.sh /root/
+COPY jupyter_notebook_config.py /root/.jupyter/jupyter_config.py 
+WORKDIR /root/notebook
+CMD ["/root/start_notebook.sh"]
