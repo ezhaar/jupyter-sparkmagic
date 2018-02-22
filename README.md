@@ -1,4 +1,4 @@
-# Docker image to run Jupyter
+# Docker image to run Jupyterlab
 This image provides an image based on Alpine Linux to run Jupyter. The image has `sparkmagic` installed already so that it can be used against a remote `HDInsight` cluster.
 
 ##
