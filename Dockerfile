@@ -23,7 +23,7 @@ RUN apk --no-cache add --virtual build-deps \
     libpng-dev \
     freetype-dev && \
     pip3 install --no-cache-dir -r /tmp/requirements.txt && \
-    jupyter-kernelspec install --user $(pip3 show sparkmagic | grep -i location | awk '{print $2}')/sparkmagic/kernels/pyspark3kernel && \
+    jupyter-kernelspec install $(pip3 show sparkmagic | grep -i location | awk '{print $2}')/sparkmagic/kernels/pyspark3kernel && \
     jupyter nbextension enable --py --sys-prefix widgetsnbextension && \
     jupyter serverextension enable --py sparkmagic && \
     apk del build-deps 
