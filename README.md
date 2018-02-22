@@ -23,7 +23,7 @@ $ docker build . -t jupyter-sparkmagic
 $ docker run -d \
     -p 9999:9999 \
     --mount type=bind,source=/home/<username>/notebooks,target=/root/notebooks \
-    --mount type=bind,source=$(pwd)/.sparkmagic,target=/root/.sparkmagic,readonly \
+    --mount type=bind,source=$(pwd)/.sparkmagic,target=/root/.sparkmagic \
     jupyter-sparkmagic
 ```
 Access jupyter by opening `localhost:9999` in a browser and use `supersecret` as the password.
