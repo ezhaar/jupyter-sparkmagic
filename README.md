@@ -32,5 +32,5 @@ Access jupyter by opening `localhost:9999` in a browser and use `supersecret` as
 In order to add additional python packages to the container, update the `requirements.txt` file by adding the desired packages. Once all the packages have been added, rebuild the image and start a new container.
 
 #### ToDo: 
-- [ ] pre-commit hook to strip output from the notebooks
-- [ ] authentication for notebooks
+- [ ] pre-commit hook to strip output from the notebooks/nbdime
+
